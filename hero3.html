@@ -492,15 +492,20 @@
      
       
     }
-
+    .swiper-control{
+        position: relative;
+        left: 330px;
+        margin-bottom: 80px;
+    }
     .swiper-pagination {
       position: absolute;
       bottom: -350px;
       left: 70px;
       
-    
     }
-    
+    .swiper-pagination-bullet{
+        background: #032f30;
+    }
 
    .button-next{
      background-color: #032f30;
@@ -784,9 +789,11 @@
             </div>
         </div>
       </div>
+      <div class="swiper-control">
       <div class="button-next"><i class="fas fa-arrow-right"></i></div>
       <div class="button-prev"><i class="fas fa-arrow-left"></i></div>
       <div class="swiper-pagination"></div>
+      </div>
     </div>
   
   
@@ -1011,9 +1018,11 @@
 <script>
   var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
-    
-    
     effect: "slide",
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
     navigation: {
       nextEl: ".button-next",
       prevEl: ".button-prev",
